@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26730.15
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amido.TechTest.DotNet.VSTest", "Amido.TechTest.DotNet.VSTest\Amido.TechTest.DotNet.VSTest.csproj", "{5E7A6F97-F375-41CF-8239-A8DCB5DBC253}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amido.TechTest.DotNet.NUnit", "Amido.TechTest.DotNet.NUnit\Amido.TechTest.DotNet.NUnit.csproj", "{3CD638C8-23A2-4DAB-A3CF-FBB50A704E13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amido.TechTest.NetCore.Bddfy", "Amido.TechTest.NetCore.Bddfy\Amido.TechTest.NetCore.Bddfy.csproj", "{EB8109BC-36CB-4929-A81C-589647903ACC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{3CD638C8-23A2-4DAB-A3CF-FBB50A704E13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CD638C8-23A2-4DAB-A3CF-FBB50A704E13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CD638C8-23A2-4DAB-A3CF-FBB50A704E13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB8109BC-36CB-4929-A81C-589647903ACC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB8109BC-36CB-4929-A81C-589647903ACC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB8109BC-36CB-4929-A81C-589647903ACC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB8109BC-36CB-4929-A81C-589647903ACC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

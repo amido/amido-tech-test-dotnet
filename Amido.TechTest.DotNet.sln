@@ -7,7 +7,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amido.TechTest.DotNet.VSTes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amido.TechTest.DotNet.NUnit", "Amido.TechTest.DotNet.NUnit\Amido.TechTest.DotNet.NUnit.csproj", "{3CD638C8-23A2-4DAB-A3CF-FBB50A704E13}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amido.TechTest.NetCore.Bddfy", "Amido.TechTest.NetCore.Bddfy\Amido.TechTest.NetCore.Bddfy.csproj", "{EB8109BC-36CB-4929-A81C-589647903ACC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Amido.TechTest.NetCore.XUnit", "Amido.TechTest.NetCore.XUnit\Amido.TechTest.NetCore.XUnit.csproj", "{DA47A6FC-769D-47FA-B15E-E1CD4E5FD095}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B9AEDD6C-9777-4FF8-BC35-700748F11E68}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amido.TechTest.NetCore.Specflow", "Amido.TechTest.NetCore.Specflow\Amido.TechTest.NetCore.Specflow.csproj", "{6054EA6F-69F8-4825-8F4E-806AD70AA546}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +30,14 @@ Global
 		{3CD638C8-23A2-4DAB-A3CF-FBB50A704E13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CD638C8-23A2-4DAB-A3CF-FBB50A704E13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CD638C8-23A2-4DAB-A3CF-FBB50A704E13}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EB8109BC-36CB-4929-A81C-589647903ACC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EB8109BC-36CB-4929-A81C-589647903ACC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EB8109BC-36CB-4929-A81C-589647903ACC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EB8109BC-36CB-4929-A81C-589647903ACC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA47A6FC-769D-47FA-B15E-E1CD4E5FD095}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA47A6FC-769D-47FA-B15E-E1CD4E5FD095}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA47A6FC-769D-47FA-B15E-E1CD4E5FD095}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA47A6FC-769D-47FA-B15E-E1CD4E5FD095}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6054EA6F-69F8-4825-8F4E-806AD70AA546}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6054EA6F-69F8-4825-8F4E-806AD70AA546}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6054EA6F-69F8-4825-8F4E-806AD70AA546}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6054EA6F-69F8-4825-8F4E-806AD70AA546}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

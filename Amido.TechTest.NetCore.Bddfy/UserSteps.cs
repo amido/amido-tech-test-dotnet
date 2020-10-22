@@ -33,19 +33,18 @@ namespace Amido.TechTest.NetCore.Bddfy
             DisposeAsync();
         }
 
-
-
-        public void GivenANewUser()
+        public void CreateNewUser()
         {
             var joe = new User()
             {
                 Name = "Joe",
                 Password = "MyCurrentPassword"
             };
+            
             stepsContext.Current.Add("User", joe);
         }
 
-        public async Task WhenIRequestToCreateAUserAsync()
+        public async Task RequestToCreateAUserAsync()
         {
             string token = await GetBearerToken();
             httpClient.DefaultRequestHeaders.Add("Authorization", $"bearer {token}");
@@ -58,39 +57,12 @@ namespace Amido.TechTest.NetCore.Bddfy
             var location = response.Headers.Location;
             userId = location.Segments.LastOrDefault();
         }
-        public void IShouldGetAUserIdForTheNewUser()
+        public void GetAUserIdForTheNewUser()
         {
             Assert.NotNull(userId);
         }
 
-        public async Task GivenAUserExists()
-        {
-            if (userId == "")
-            {
-                var joe = new User()
-                {
-                    Name = "Joe",
-                    Password = "MyCurrentPassword"
-                };
-                string token = await GetBearerToken();
-
-                if (httpClient.DefaultRequestHeaders.Contains("Authorization"))
-                {
-                    httpClient.DefaultRequestHeaders.Remove("Authorization");
-                }
-                
-                httpClient.DefaultRequestHeaders.Add("Authorization", $"bearer {token}");
-
-                var response = await httpClient.PostAsJsonAsync(resource, joe);
-                Assert.Equal(HttpStatusCode.Created, response.StatusCode);
-
-                var location = response.Headers.Location;
-                userId = location.Segments.LastOrDefault();
-                stepsContext.Current.Add("UpdatedUser", joe);
-            }
-        }
-
-        public async Task WhenIRequestToChangePasswordAsync()
+        public async Task RequestToChangePasswordAsync()
         {
             var joe = new
             {
@@ -107,7 +79,7 @@ namespace Amido.TechTest.NetCore.Bddfy
             stepsContext.Current.Add("joeResponse", joeResponse);
         }
 
-        public void IShouldGetAUserPasswordUpdated()
+        public void GetAUserPasswordUpdated()
         {
             var joe = stepsContext.Current["joe"];
             var joeResponse = stepsContext.Current["joeResponse"];
@@ -132,7 +104,7 @@ namespace Amido.TechTest.NetCore.Bddfy
             {
                 var response = await httpClient.DeleteAsync($"{resource}/{userId}");
                 Assert.Equal(HttpStatusCode.NoContent, response.StatusCode);
-                
+                stepsContext.Current.Clear();
             }
         }
     }

@@ -19,9 +19,9 @@ namespace Amido.TechTest.NetCore.Bddfy
         [Fact]
         public void Create_a_user()
         {
-            this.Given(step => userSteps.GivenANewUser())
-                .When(step => userSteps.WhenIRequestToCreateAUserAsync())
-                .Then(step => userSteps.IShouldGetAUserIdForTheNewUser())
+            this.Given(step => userSteps.CreateNewUser())
+                .When(step => userSteps.RequestToCreateAUserAsync())
+                .Then(step => userSteps.GetAUserIdForTheNewUser())
                 .BDDfy();
         }
     }

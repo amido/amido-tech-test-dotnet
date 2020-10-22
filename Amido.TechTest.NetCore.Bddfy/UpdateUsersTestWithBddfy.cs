@@ -19,9 +19,10 @@ namespace Amido.TechTest.NetCore.Bddfy
         [Fact]
         public void Update_user_password()
         {
-            this.Given(step => userSteps.GivenAUserExists())
-                .When(step => userSteps.WhenIRequestToChangePasswordAsync())
-                .Then(step => userSteps.IShouldGetAUserPasswordUpdated())
+            this.Given(step => userSteps.CreateNewUser())
+                .When(step => userSteps.RequestToCreateAUserAsync())
+                .And(step => userSteps.RequestToChangePasswordAsync())
+                .Then(step => userSteps.GetAUserPasswordUpdated())
                 .BDDfy();
         }
     }
